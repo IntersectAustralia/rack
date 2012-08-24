@@ -577,7 +577,8 @@ module Rack
                   end
                 end
 
-                if content_type || filename
+                #if content_type || filename
+                if filename
                   body = Tempfile.new("RackMultipart")
                   body.binmode  if body.respond_to?(:binmode)
                 end
